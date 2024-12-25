@@ -1,0 +1,76 @@
+.nav-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 250px;
+    background-color: #001529; /* Matches Ant Design's dark theme */
+    position:fixed; /* Sticks the navbar to the left */
+    top: 0;
+    left: 0;
+    z-index: 1000;
+  }
+  .stat {
+    margin-left: 250px; /* Offset for the fixed navbar width */
+    margin-top: 20px; /* Space below the heading */
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Smaller grid items to fit in a single row */
+    gap: 15px; /* Space between grid items */
+    justify-content: center; /* Center the grid within the available space */
+  }
+  
+  .stat .ant-statistic {
+    background-color: #f0f2f5; /* Light grey background for stats */
+    padding: 10px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for better visibility */
+    height: 100px; /* Reduced height for smaller items */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+  }
+  
+  
+  .logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
+  
+  .logo {
+    color: white;
+    margin-left: 10px;
+    text-align: center;
+  }
+  
+  .menu {
+    flex-grow: 1; /* Allows the menu to expand */
+  }
+  .heading {
+    text-align: center;
+    margin-left: 250px; /* Offset to align with the fixed navbar */
+    margin-top: 20px; /* Add some spacing from the top */
+    color: #001529; /* Matches the dark blue theme */
+    font-weight: bold; /* Make the heading stand out */
+  }
+  
+  .footer {
+    background-color: #001529; /* Dark background matching Ant Design's theme */
+    padding: 8px 10px;
+    position: fixed; /* Adjust to `fixed` if you want it always visible at the bottom */
+    bottom: 0;
+    width: 100%;
+  }
+  
+  .footer a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .footer a:hover {
+    color: #1890ff; /* Highlight on hover */
+  }
+  
