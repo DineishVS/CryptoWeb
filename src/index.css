@@ -1,76 +1,155 @@
+/* Navbar */
 .nav-container {
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-    width: 250px;
-    background-color: #001529; /* Matches Ant Design's dark theme */
-    position:fixed; /* Sticks the navbar to the left */
-    top: 0;
-    left: 0;
-    z-index: 1000;
-  }
-  .stat {
-    margin-left: 250px; /* Offset for the fixed navbar width */
-    margin-top: 20px; /* Space below the heading */
-    padding: 20px;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Smaller grid items to fit in a single row */
-    gap: 15px; /* Space between grid items */
-    justify-content: center; /* Center the grid within the available space */
-  }
-  
-  .stat .ant-statistic {
-    background-color: #f0f2f5; /* Light grey background for stats */
-    padding: 10px;
-    border-radius: 8px;
-    text-align: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for better visibility */
-    height: 100px; /* Reduced height for smaller items */
-    display: flex;
-    flex-direction: column;
-    justify-content: center; /* Center content vertically */
-    align-items: center; /* Center content horizontally */
-  }
-  
-  
-  .logo-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-  }
-  
-  .logo {
-    color: white;
-    margin-left: 10px;
-    text-align: center;
-  }
-  
-  .menu {
-    flex-grow: 1; /* Allows the menu to expand */
-  }
-  .heading {
-    text-align: center;
-    margin-left: 250px; /* Offset to align with the fixed navbar */
-    margin-top: 20px; /* Add some spacing from the top */
-    color: #001529; /* Matches the dark blue theme */
-    font-weight: bold; /* Make the heading stand out */
-  }
-  
-  .footer {
-    background-color: #001529; /* Dark background matching Ant Design's theme */
-    padding: 8px 10px;
-    position: fixed; /* Adjust to `fixed` if you want it always visible at the bottom */
-    bottom: 0;
-    width: 100%;
-  }
-  
-  .footer a {
-    color: white;
-    text-decoration: none;
-  }
-  
-  .footer a:hover {
-    color: #1890ff; /* Highlight on hover */
-  }
-  
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 240px;
+  background-color: #001529; /* Matches Ant Design's dark theme */
+  position: fixed; /* Sticks the navbar to the left */
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+/* Logo */
+.logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.logo {
+  color: white;
+  margin-left: 10px;
+  text-align: center;
+}
+
+/* General Heading */
+.heading {
+  text-align: center;
+  margin-left: 260px; /* Offset to align with the fixed navbar */
+  margin-top: 20px; /* Add spacing from the top */
+  color: #001529; /* Matches the dark blue theme */
+  font-weight: bold; /* Make the heading stand out */
+}
+
+/* Stats Section */
+.stat {
+  margin-left: 260px; /* Offset for the fixed navbar width */
+  margin-top: 20px; /* Space below the heading */
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Smaller grid items to fit in a single row */
+  gap: 15px; /* Space between grid items */
+  justify-content: flex-start; /* Align grid items to the left */
+}
+
+.stat .ant-statistic {
+  background-color: #f0f2f5; /* Light grey background for stats */
+  padding: 10px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for better visibility */
+  height: 100px; /* Reduced height for smaller items */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center content vertically */
+  align-items: center; /* Center content horizontally */
+}
+
+/* Home Heading */
+.home-heading-container {
+  display: flex;
+  justify-content: space-between; /* Align the title and link on opposite ends */
+  align-items: center; /* Vertically center the items */
+  margin-left: 260px; /* Offset to account for the fixed navbar */
+  margin-top: 20px; /* Add spacing from the top */
+  padding: 0 20px; /* Add some padding for better spacing */
+}
+
+.home-title {
+  color: #001529; /* Matches the theme color */
+  font-weight: bold;
+}
+
+.show-more {
+  color: #1890ff; /* Highlighted link color */
+  font-weight: 500;
+}
+
+.show-more a {
+  text-decoration: none;
+}
+
+.show-more a:hover {
+  color: #40a9ff; /* Lighter blue on hover for better interactivity */
+}
+
+/* Cryptocurrencies Section */
+.crypto-card-container {
+  margin-left: 260px; /* Adjust to match the width of your navbar */
+  margin-top: 20px; /* Space below the navbar */
+  padding: 40px; /* Add padding for proper spacing */
+  display: flex;
+  flex-wrap: wrap; /* Allow cards to wrap onto the next line */
+  gap: 20px; /* Space between cards */
+  justify-content:center; 
+}
+
+.crypto-card {
+  background-color: #f0f2f5; /* Light grey background for cards */
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for better visibility */
+}
+
+.crypto-image {
+  width: 40px;
+  height: 40px;
+}
+
+.ant-card {
+  width: 100%; /* Ensure the card takes full width of the column */
+  max-width: 250px; /* Limit the max width to fit within the row */
+}
+
+.ant-card-body {
+  padding: 10px;
+}
+
+.crypto-card-container .ant-col {
+  flex: 1 1 calc(20% - 20px); /* Ensure five cards fit in one row with spacing */
+  max-width: 250px; /* Limit the maximum width of cards */
+  min-width: 200px; /* Ensure a minimum width for consistent layout */
+}
+
+.crypto-card-container .ant-card-title {
+  font-size: 16px; /* Adjust font size */
+  font-weight: bold;
+}
+
+.crypto-card-container p {
+  margin: 8px 0;
+  font-size: 14px;
+}
+
+/* Footer */
+.footer {
+  background-color: #001529; /* Dark background matching Ant Design's theme */
+  padding: 8px 10px;
+  position: relative; /* Always visible at the bottom */
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+.footer a {
+  color: white;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  color: #1890ff; /* Highlight on hover */
+}
+
